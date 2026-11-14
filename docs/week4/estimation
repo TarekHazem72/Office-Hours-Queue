@@ -1,0 +1,155 @@
+ ------------------------------------------------------------------------
+  ID               User story       Epic                Provisional points
+                   (short title)                     
+  ---------------- ---------------- ---------------- ---------------------
+  OHQ-01           Open an          Session                              3
+                   office-hours     Management       
+                   session                           
+
+  OHQ-02           Close an         Session                              2
+                   office-hours     Management       
+                   session                           
+
+  OHQ-03           View current     Session                              2
+                   session status   Management       
+
+  OHQ-04           View previous    Session                              3
+                   office-hours     Management       
+                   sessions                          
+
+  OHQ-05           View open        Queue                                2
+                   office-hours     Registration     
+                   sessions                          
+
+  OHQ-06           Join a queue     Queue                                3
+                   with a topic     Registration     
+
+  OHQ-07           Prevent          Queue                                3
+                   duplicate queue  Registration     
+                   entries                           
+
+  OHQ-08           Leave a queue    Queue                                2
+                   before being     Registration     
+                   called                            
+
+  OHQ-09           View current     Queue Monitoring                     2
+                   queue position                    
+
+  OHQ-10           View estimated   Queue Monitoring                     3
+                   waiting time                      
+
+  OHQ-11           View request     Queue Monitoring                     2
+                   status                            
+
+  OHQ-12           Update queue     Queue Monitoring                     3
+                   position when                     
+                   students are                      
+                   served                            
+
+  OHQ-13           View the ordered Queue                                3
+                   list of waiting  Administration   
+                   students                          
+
+  OHQ-14           Call the next    Queue                                2
+                   student          Administration   
+
+  OHQ-15           Mark a student   Queue                                2
+                   as done          Administration   
+
+  OHQ-16           View students    Queue                                3
+                   served during a  Administration   
+                   session                           
+
+                  Total                                   40
+                                              
+  ------------------------------------------------------------------------
+
+
+  -----------------------------------------------------------------------------------
+  Story        I         N         V         E         S         T     Review /
+                                                                       action
+  -------- --------- --------- --------- --------- --------- --------- --------------
+  OHQ-01       ✓         ✓         ✓         ✓         ✓         ✓     Confirm what
+                                                                       happens if a
+                                                                       session is
+                                                                       already open.
+
+  OHQ-02       ✓         ✓         ✓         ✓         ✓         ✓     Define how
+                                                                       closing
+                                                                       affects
+                                                                       students
+                                                                       already
+                                                                       waiting.
+
+  OHQ-03       ✓         ✓         ✓         ✓         ✓         ✓     Specify the
+                                                                       session states
+                                                                       displayed.
+
+  OHQ-04       ✓         ✓         ✓         ✓         ✓         ✓     Define which
+                                                                       historical
+                                                                       sessions are
+                                                                       visible.
+
+  OHQ-05       ✓         ✓         ✓         ✓         ✓         ✓     Specify what
+                                                                       information
+                                                                       identifies an
+                                                                       open session.
+
+  OHQ-06       ✓         ✓         ✓         ✓         ✓         ✓     Define
+                                                                       required topic
+                                                                       length and
+                                                                       validation.
+
+  OHQ-07       ✓         ✓         ✓         ✓         ✓         ✓     Define what
+                                                                       counts as an
+                                                                       existing
+                                                                       active queue
+                                                                       entry.
+
+  OHQ-08       ✓         ✓         ✓         ✓         ✓         ✓     Define whether
+                                                                       a student can
+                                                                       leave after
+                                                                       being called.
+
+  OHQ-09       ✓         ✓         ✓         ✓         ✓         ✓     Define how
+                                                                       position is
+                                                                       calculated and
+                                                                       refreshed.
+
+  OHQ-10       ✓         ✓         ✓         ✓         ✓         ✓     Confirm the
+                                                                       average
+                                                                       service-time
+                                                                       calculation.
+
+  OHQ-11       ✓         ✓         ✓         ✓         ✓         ✓     Specify the
+                                                                       possible
+                                                                       request
+                                                                       statuses.
+
+  OHQ-12       ✓         ✓         ✓         ✓         ✓         ✓     Define when
+                                                                       position
+                                                                       updates occur.
+
+  OHQ-13       ✓         ✓         ✓         ✓         ✓         ✓     Specify the
+                                                                       student
+                                                                       details and
+                                                                       topic shown to
+                                                                       the
+                                                                       instructor.
+
+  OHQ-14       ✓         ✓         ✓         ✓         ✓         ✓     Define
+                                                                       behaviour when
+                                                                       the queue is
+                                                                       empty.
+
+  OHQ-15       ✓         ✓         ✓         ✓         ✓         ✓     Define the
+                                                                       status
+                                                                       transition and
+                                                                       queue
+                                                                       advancement.
+
+  OHQ-16       ✓         ✓         ✓         ✓         ✓         ✓     Define which
+                                                                       session
+                                                                       history fields
+                                                                       are recorded.
+
