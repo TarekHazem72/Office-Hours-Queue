@@ -1,0 +1,69 @@
+Scenario: Instructor successfully opens a session
+  Given the instructor is logged in
+  And no session is currently active
+  When the instructor opens an office-hours session
+  Then the session status becomes Open
+  And students can join the queue
+
+Scenario: Instructor attempts to open a duplicate session
+  Given the instructor already has an open session
+  When the instructor attempts to open another session
+  Then the system prevents the duplicate session
+
+Scenario: Instructor closes an active session
+  Given an office-hours session is open
+  When the instructor closes the session
+  Then the session status becomes Closed
+  And students cannot join the queue
+
+Scenario: Instructor attempts to close an inactive session
+  Given there is no active session
+  When the instructor attempts to close a session
+  Then the system displays an appropriate error
+
+  Scenario: Student successfully joins
+  Given an office-hours session is open
+  And the student is not already in the queue
+  When the student submits a topic and joins
+  Then the student is added to the queue
+  And the student receives a queue position
+
+Scenario: Student attempts to join a closed queue
+  Given an office-hours session is closed
+  When the student attempts to join
+  Then the system rejects the request
+
+  Scenario: Student attempts to join twice
+  Given the student already has a place in an open queue
+  When the student attempts to join again
+  Then the system rejects the second entry
+  And the original queue position is preserved
+
+Scenario: Student joins after completing a previous request
+  Given the student has completed their previous request
+  And the office-hours session is still open
+  When the student attempts to join again
+  Then the system evaluates the request as a new entry
+
+  Scenario: Calculate waiting time
+  Given the student's queue position is 3
+  And the average service time is 5 minutes
+  When the system calculates the estimated waiting time
+  Then the estimated waiting time is 15 minutes
+
+Scenario: Student is first in the queue
+  Given the student's queue position is 1
+  And the average service time is 5 minutes
+  When the system calculates the estimated waiting time
+  Then the estimated waiting time is 5 minutes
+
+  Scenario: Instructor calls the next student
+  Given there are students waiting in the queue
+  When the instructor selects Call Next
+  Then the first waiting student becomes Called
+  And the student is notified of their status
+
+Scenario: Instructor calls next when queue is empty
+  Given there are no students waiting
+  When the instructor selects Call Next
+  Then the system indicates that the queue is empty
