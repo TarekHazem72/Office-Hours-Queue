@@ -1,0 +1,14 @@
+# Definition of Done
+
+A user story is considered complete when:
+
+- [ ] All acceptance criteria are satisfied.
+- [ ] The implementation matches the requirements.
+- [ ] Relevant unit tests have been written and pass.
+- [ ] Relevant error cases have been tested.
+- [ ] Code has been reviewed by another team member.
+- [ ] The implementation has been merged into the main branch.
+- [ ] The GitHub Actions CI pipeline passes.
+- [ ] The linter reports no outstanding issues.
+- [ ] Relevant documentation has been updated.
+- [ ] The Product Owner has accepted the completed story.
